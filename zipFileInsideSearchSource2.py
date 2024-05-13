@@ -11,7 +11,7 @@ def search(dirname):
     
     try:
         for filename in filenames:
-            full_filename = os.path.join(dirname, filename)
+            full_filename = os.path.join(dirname, filename) 
             if os.path.isdir(full_filename):
                 sys.stdout.write("탐색한 폴더 : " + full_filename + "\n")
                 search(full_filename)
