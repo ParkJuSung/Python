@@ -50,4 +50,4 @@ search(dir_path)
 #search(os.getcwd())
 
 sys.stdout.write("탐색완료 종료하려면 엔터키 입력하세요\n")
-data = sys.stdin.readline().rstrip()
+data = sys.stdin.readline().rstrip() 
