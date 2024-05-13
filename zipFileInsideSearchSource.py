@@ -49,5 +49,5 @@ search(dir_path)
 #sys.stdout.write("탐색시작 폴더 : " + os.getcwd() + "\n")
 #search(os.getcwd())
 
-sys.stdout.write("탐색완료 종료하려면 엔터키 입력하세요\n")
+sys.stdout.write("탐색완료 종료하려면 엔터키 입력하세요\n") 
 data = sys.stdin.readline().rstrip() 
