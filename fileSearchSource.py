@@ -3,7 +3,7 @@ import io
 import sys
 import traceback
 
-def search(dirname):
+def search(dirname): 
     files = os.listdir(dirname)
 
     try:
