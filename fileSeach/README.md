@@ -1,14 +1,14 @@
 These sources find 0byte File with Python
 
-fileSearchSource common file find 0byte, 
+fileSearchSource  find common file whth 0 byte
 
-zipFileInsideSearchSource ZipInside find 0byte File 
+zipFileInsideSearchSource find ZipInsideFile with 0byte 
 
-fileSearchSource Relative path
+fileSearchSource use Relative path
 fileSearchSource2 Choose your Direct route
 
 
-zipFileInsideSearchSource Relative path
+zipFileInsideSearchSource use Relative path
 zipFileInsideSearchSource2 Choose your Direct route
 
 
