@@ -21,8 +21,12 @@ def search(dirname):
                     with zipfile.ZipFile(full_filename,'r') as zip_ref:
                         file_list = zip_ref.infolist()
                         for file in file_list:
-                            #file.filename = file.filename.encode("cp437").decode('euc-kr','ignore')
+                           # file.filename = file.filename.encode("cp437").decode('euc-kr','ignore')
                             
+                           # if(file.filename[-1] == '/'):
+                           #     sys.stdout.write("압축 내 폴더: " + full_filename + " "+ str(file.filename) + "\n")
+                           #     continue
+
                             if(file.file_size == 0):
                                 sys.stdout.write("0바이트 파일: " + full_filename + " "+ str(file.filename) + "\n")
                                 #print("0바이트 파일: " + full_filename + " "+ str(file.file_size))
@@ -36,18 +40,21 @@ def search(dirname):
     #    traceback_message = traceback.format_exc()
     #    sys.stdout.write("에러 내용: " + traceback_message + "\n")
         pass
-        
-
-root = tkinter.Tk()
-root.withdraw()
-dir_path = filedialog.askdirectory(parent=root,initialdir="/",title='Please select a directory')
+    except:
+        sys.stdout.write("예기치 않은 에러가 발생하였습니다.\n")
+        sys.stdout.write("에러 발생 파일 명: " + full_filename + "\n")
+        sys.stdout.write("에러 내용: " + traceback_message + "\n")
+        pass
+#root = tkinter.Tk()
+#root.withdraw()
+#dir_path = filedialog.askdirectory(parent=root,initialdir="/",title='Please select a directory')
 #print("\ndir_path : ", dir_path)
 
-sys.stdout.write("탐색시작 폴더 : " + dir_path + "\n")
-search(dir_path)
+#sys.stdout.write("탐색시작 폴더 : " + dir_path + "\n")
+#search(dir_path)
 
-#sys.stdout.write("탐색시작 폴더 : " + os.getcwd() + "\n")
-#search(os.getcwd())
+sys.stdout.write("탐색시작 폴더 : " + os.getcwd() + "\n")
+search(os.getcwd())
 
-sys.stdout.write("탐색완료 종료하려면 엔터키 입력하세요\n") 
-data = sys.stdin.readline().rstrip() 
+sys.stdout.write("탐색완료 종료하려면 엔터키 입력하세요\n")
+data = sys.stdin.readline().rstrip()
